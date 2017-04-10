@@ -8,7 +8,7 @@ def pr(v):
     print(v, type(v)) ;
     i = int(float((v)));
     print(im_names[i]);
-    im = PhotoImage(file = r"D:/time_travel_prog_images/{}".format(im_names[i]));
+    im = PhotoImage(file = r"<location of image files>"/{}".format(im_names[i]));
                 
     print('image', im);
     can.delete("all")
@@ -18,16 +18,16 @@ def pr(v):
 
 
 
-im_names = os.listdir("D:/time_travel_prog_images");
+im_names = os.listdir("<location of image files>");
 x, y = size();
     
 r = Tk();
-im = PhotoImage(file = r"D:/time_travel_prog_images/scene00001.png");
+im = PhotoImage(file = r"<location of image files>/<any pic from location>");
 
 can = Canvas();
 can.pack(side = 'top', fill = 'both', expand = 'yes')
 can.create_image(10, 10, image = im, anchor = 'nw');
 
-s = ttk.Scale(r, orient = 'horizontal', length = x, from_ = 0, to = len(os.listdir("D:/time_travel_prog_images")) - 1, command = pr).pack();#working without passing any value from command....interesting..
+s = ttk.Scale(r, orient = 'horizontal', length = x, from_ = 0, to = len(os.listdir("<location of image files>")) - 1, command = pr).pack();#working without passing any value from command....interesting..
 
 r.mainloop();
