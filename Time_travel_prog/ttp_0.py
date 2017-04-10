@@ -8,7 +8,7 @@ def pr(v):
     print(v, type(v)) ;
     i = int(float((v)));
     print(im_names[i]);
-    im = PhotoImage(file = r"<location of image files>"/{}".format(im_names[i]));
+    im = PhotoImage(file = r"<location of image files>/{}".format(im_names[i]));
                 
     print('image', im);
     can.delete("all")
